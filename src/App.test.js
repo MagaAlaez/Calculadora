@@ -3,6 +3,6 @@ import App from './App';
 
 test('renders learn react link', () => {
   render(<App />);
-  const linkElement = screen.getByText(/Project by Acevedo Fernando - Ing. Soft. UTN FRRe/i);
+  const linkElement = screen.getByText(/INGENIERIA DE SOFTWARE - Alaez, Magali Sol/i);
   expect(linkElement).toBeInTheDocument();
 });

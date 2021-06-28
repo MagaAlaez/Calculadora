@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import logo from './fa.png';
+import logo from './mates.png';
 import './App.css';
 import { suma } from './Utils';
 
@@ -40,7 +40,7 @@ function App() {
       <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Project by Acevedo Fernando - Ing. Soft. UTN FRRe <br /><br /><br />
+        INGENIERIA DE SOFTWARE - Alaez, Magali Sol <br /><br /><br />
         </p>
         <div>
           <label>Numero A: </label>
