@@ -1,4 +1,4 @@
 
-export const suma = (a, b) => {
-  return a + b;
+export const Multiplicacion = (a, b) => {
+  return a * b;
 };

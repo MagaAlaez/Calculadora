@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
-import logo from './fondo.jpg';
+import logo from './matematica.png';
 import './App.css';
-import { suma } from './Utils';
+import { Multiplicacion, suma } from './Utils';
 
 // function App() {
 //   return (
@@ -32,7 +32,7 @@ function App() {
   const [total, setTotal] = useState(0);
 
   const calcularResultado = useCallback(() => {
-    setTotal(suma(numA, numB));
+    setTotal(Multiplicacion(numA, numB));
   }, [numA, numB]);
 
   return (
@@ -40,10 +40,10 @@ function App() {
       <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
         <p>
-        INGENIERIA DE SOFTWARE - Alaez, Magali Sol <br /><br /><br />
+        Projecto de INGENIERIA DE SOFTWARE - Alaez, Magali Sol <br /><br /><br />
         </p>
         <div>
-          <label>Numero A: </label>
+          <label>Multiplicando: </label>
           <input
             value={numA}
             style={{fontSize: 24, width: 100, textAlign: 'center'}}
@@ -51,7 +51,7 @@ function App() {
           />
         </div>
         <div>
-          <label>Numero B: </label>
+          <label>Multiplicador: </label>
           <input
             value={numB}
             style={{fontSize: 24, width: 100, textAlign: 'center'}}
@@ -63,7 +63,7 @@ function App() {
             style={{fontSize: 24, margin: '40px 0'}}
             onClick={calcularResultado}
           >
-            Sumar
+            Multiplicar
           </button>
         </div>
         <div>
