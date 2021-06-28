@@ -42,3 +42,17 @@ workflows:
       - build-and-test
       # For running simple node tests, you could optionally use the node/test job from the orb to replicate and replace the job above in fewer lines.
       # - node/test
+
+# agrego lo siguiente para que automaticamente verifique en heroku
+deploy:
+  provider: heroku
+  api_key:
+    secure:
+  app: your-heroku-app-name
+  on:
+    repo: githubu_sername/repo_name
+    branch: main
+  skip_cleanup: 'true'
+  run:
+    - pip install -r requirements.txt
+    - python manage.py db upgrade
