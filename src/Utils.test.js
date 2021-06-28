@@ -1,6 +1,6 @@
-import { suma } from './Utils';
+import { Multiplicacion } from './Utils';
 
-test('suma bien', () => {
+test('multiplica bien', () => {
   expect(suma(0, 2)).toBe(0);
   expect(suma(2, 0)).toBe(0);
   expect(suma(2, 2)).toBe(4);
