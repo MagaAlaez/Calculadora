@@ -48,11 +48,11 @@ deploy:
   provider: heroku
   api_key:
     secure:
-  app: your-heroku-app-name
+  app: calculadora123
   on:
-    repo: githubu_sername/repo_name
+    repo: MagaAlaez/Calculadora
     branch: main
   skip_cleanup: 'true'
-  run:
-    - pip install -r requirements.txt
-    - python manage.py db upgrade
+  #run:
+  #  - pip install -r requirements.txt
+  #  - python manage.py db upgrade
