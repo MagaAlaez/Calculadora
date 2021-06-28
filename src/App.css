@@ -10,13 +10,13 @@
 
 
 .App-header {
-  background-color: #c3e6e6;
+  background-color: #E7F8F4;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: stretch;
-  font-size: calc(20px + 2vmin);
+  font-size: calc(15px + 2vmin);
   color: rgb(180, 35, 144);
 }
 
