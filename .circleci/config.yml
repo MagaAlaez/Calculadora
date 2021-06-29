@@ -38,7 +38,8 @@ jobs:
       - checkout
       - heroku/install
       - run:
-         - heroku/deploy-via-git
+          command:
+            - heroku/deploy-via-git
 
 
 workflows:
