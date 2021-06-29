@@ -7,7 +7,7 @@ orbs:
   # Orbs reduce the amount of configuration required for common tasks. 
   # See the orb documentation here: https://circleci.com/developer/orbs/orb/circleci/node
   node: circleci/node@4.1
-  heroku: circleci/heroku@x.y
+  heroku: circleci/heroku@1.2.6
   #heroku: circleci/heroku@1.2.6
 
 jobs:
