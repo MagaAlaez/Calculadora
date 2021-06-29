@@ -63,7 +63,7 @@ jobs:
       - image: cimg/node:15.1
     steps:
       - checkout
-    # - sonarcloud/scan
+      - sonarcloud/scan
       
 workflows:
   # Below is the definition of your workflow.
@@ -81,5 +81,5 @@ workflows:
       # - node/test
   main:
     jobs:
-      - build #:
-        #  context: sonarcloud
+      - build:
+          context: sonarcloud
