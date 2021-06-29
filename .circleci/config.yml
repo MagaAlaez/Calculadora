@@ -37,9 +37,10 @@ jobs:
     steps:
       - checkout
       - heroku/install
+      - heroku/deploy-via-git
       - run:
           command: npm start
-      - heroku/deploy-via-git
+      
 
 workflows:
   # Below is the definition of your workflow.
