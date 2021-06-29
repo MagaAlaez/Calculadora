@@ -40,7 +40,7 @@ function App() {
       <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
         <p>
-        Projecto de INGENIERIA DE SOFTWARE - Alaez, Magali Sol <br /><br /><br />
+        Proyecto de INGENIERIA DE SOFTWARE - Alaez, Magali Sol <br /><br /><br />
         </p>
         <div>
           <label>Multiplicando: </label>
