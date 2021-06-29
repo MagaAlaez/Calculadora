@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import logo from './matematica.png';
 import './App.css';
-import { Multiplicacion, suma } from './Utils';
+import { Multiplicacion } from './Utils';
 
 // function App() {
 //   return (
