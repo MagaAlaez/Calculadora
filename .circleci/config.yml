@@ -81,5 +81,5 @@ workflows:
       # - node/test
   main:
     jobs:
-      - build #:
+      - build 
         #  context: sonarcloud
