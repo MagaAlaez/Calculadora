@@ -38,7 +38,8 @@ jobs:
       - checkout
       - heroku/install
       - run:
-          command: calculadora123/Calculadora
+          web: https://git.heroku.com/calculadora123.git
+          command: npm start
 
 workflows:
   # Below is the definition of your workflow.
