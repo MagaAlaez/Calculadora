@@ -38,7 +38,7 @@ jobs:
       - checkout
       - heroku/install
       - run:
-          web: /start-server.sh
+          command: calculadora123/Calculadora
 
 workflows:
   # Below is the definition of your workflow.
