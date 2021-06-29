@@ -38,7 +38,7 @@ jobs:
       - checkout
       - heroku/install
       - run:
-          command: npm start
+          web: npm start
 
 workflows:
   # Below is the definition of your workflow.
