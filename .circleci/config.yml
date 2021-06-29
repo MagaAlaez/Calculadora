@@ -7,8 +7,8 @@ orbs:
   # Orbs reduce the amount of configuration required for common tasks. 
   # See the orb documentation here: https://circleci.com/developer/orbs/orb/circleci/node
   node: circleci/node@4.1
-  heroku: circleci/heroku@1.2.6
-  slack: circleci/slack@4.4.2
+  #heroku: circleci/heroku@1.2.6
+  #slack: circleci/slack@4.4.2
 
 jobs:
   # Below is the definition of your job to build and test your app, you can rename and customize it as you want.
@@ -33,36 +33,36 @@ jobs:
           name: Run tests
           command: npm test
   #para que haga automaticamente en heroku
-  deploy:
-    executor: heroku/default
-    steps:
-      - checkout
-      - heroku/install
-      - run:
-          command: npm start
-      - heroku/deploy-via-git
+  #deploy:
+  #  executor: heroku/default
+  #  steps:
+  #    - checkout
+  #    - heroku/install
+  #    - run:
+  #        command: npm start
+  #    - heroku/deploy-via-git
   #para que automaticamente notifique en slack        
-  notify:
-    docker:
-      - image: cimg/base:stable
-    steps:
-      - slack/notify:
-          custom: |
-            {
-              "blocks": [
-                {
-                  "type": "section",
-                  "fields": [
-                    {
-                      "type": "plain_text",
-                      "text": "*This is a text notification*",
-                      "emoji": true
-                    }
-                  ]
-                }
-              ]
-            }
-          event: always      
+  #notify:
+  #  docker:
+  #    - image: cimg/base:stable
+  #  steps:
+  #    - slack/notify:
+  #        custom: |
+  #          {
+  #            "blocks": [
+  #              {
+  #                "type": "section",
+  #                "fields": [
+  #                  {
+  #                    "type": "plain_text",
+  #                    "text": "*This is a text notification*",
+  #                    "emoji": true
+  #                  }
+  #                ]
+  #              }
+  #            ]
+  #          }
+  #        event: always      
 
 workflows:
   # Below is the definition of your workflow.
@@ -75,11 +75,11 @@ workflows:
       # For running simple node tests, you could optionally use the node/test job from the orb to replicate and replace the job above in fewer lines.
       # - node/test
   #heroku
-  heroku_deploy:
-    jobs:
-      - deploy
+  #heroku_deploy:
+  #  jobs:
+  #    - deploy
   #slack    
-  send-notification:
-    jobs:
-      - notify:
-          context: slack-secrets
+  #send-notification:
+  #  jobs:
+  #    - notify:
+  #        context: slack-secrets
