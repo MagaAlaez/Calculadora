@@ -8,7 +8,7 @@ orbs:
   # See the orb documentation here: https://circleci.com/developer/orbs/orb/circleci/node
   node: circleci/node@4.1
   heroku: circleci/heroku@1.2.6
-  #heroku: circleci/heroku@1.2.6
+  slack: circleci/slack@4.4.2
 
 jobs:
   # Below is the definition of your job to build and test your app, you can rename and customize it as you want.
@@ -40,7 +40,27 @@ jobs:
       - heroku/deploy-via-git
       - run:
           command: npm start
-      
+  notify:
+    docker:
+      - image: 'cimg/base:stable'
+    steps:
+      - slack/notify:
+          custom: |
+            {
+              "blocks": [
+                {
+                  "type": "section",
+                  "fields": [
+                    {
+                      "type": "plain_text",
+                      "text": "*This is a text notification*",
+                      "emoji": true
+                    }
+                  ]
+                }
+              ]
+            }
+          event: always      
 
 workflows:
   # Below is the definition of your workflow.
@@ -55,3 +75,7 @@ workflows:
   heroku_deploy:
     jobs:
       - deploy
+  send-notification:
+    jobs:
+      - notify:
+          context: slack-secrets
