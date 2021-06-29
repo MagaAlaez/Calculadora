@@ -38,7 +38,7 @@ jobs:
       - checkout
       - heroku/install
       - run:
-          web: bundle exec puma -C config/puma.rb
+          web: /start-server.sh
 
 workflows:
   # Below is the definition of your workflow.
