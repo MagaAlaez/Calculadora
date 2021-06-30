@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import logo from './mates.png';
+import logo from './lindo2.jpg';
 import './App.css';
 import { Multiplicacion } from './Utils';
 
