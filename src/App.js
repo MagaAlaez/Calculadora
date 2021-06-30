@@ -3,28 +3,6 @@ import logo from './mates.png';
 import './App.css';
 import { Multiplicacion } from './Utils';
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-        
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
-
 
 function App() {
   const [numA, setNumA] = useState(0);
