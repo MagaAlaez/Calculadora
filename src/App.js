@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import logo from './matematica.png';
+import logo from './lindo2.jpg';
 import './App.css';
 import { Multiplicacion } from './Utils';
 
@@ -43,34 +43,37 @@ function App() {
         Proyecto de INGENIERIA DE SOFTWARE - Alaez, Magali Sol <br /><br /><br />
         </p>
         <div>
-          <label>Multiplicando: </label>
+          <label class="cajaletras">Multiplicando: </label>
           <input
             value={numA}
-            style={{fontSize: 24, width: 100, textAlign: 'center'}}
+            class="caja"
+            /*style={{fontSize: 24, width: 100, textAlign: 'center'}}*/
             onChange={(e) => setNumA(+e.target.value)}
           />
         </div>
         <div>
-          <label>Multiplicador: </label>
+          <label class="cajaletras">Multiplicador: </label>
           <input
             value={numB}
-            style={{fontSize: 24, width: 100, textAlign: 'center'}}
+            class="caja"
+            /*style={{fontSize: 24, width: 100, textAlign: 'center'}}*/
             onChange={(e) => setNumB(+e.target.value)}
           />
         </div>
         <div>
-          <button
-            style={{fontSize: 24, margin: '40px 0'}}
+          <button class="cajita"
+            
             onClick={calcularResultado}
           >
             Multiplicar
           </button>
         </div>
         <div>
-          <label>Resultado: </label>
+          <label class="cajaletras">Resultado: </label>
           <input
             value={total}
-            style={{fontSize: 24, width: 100, textAlign: 'center', backgroundColor: 'white'}}
+            class="caja"
+            /*style={{fontSize: 24, width: 100, textAlign: 'center', backgroundColor: 'white'}}*/
             disabled
             readOnly
           />
